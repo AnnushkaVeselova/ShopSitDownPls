@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+  <title>SitDownPls - интернет-магазин мебели</title>
+  <link rel="preload" href="fonts/OpenSansBlack.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/OpenSansBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/OpenSansRegular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PlayfairDisplayBlack.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/plugins/normalize.css">
+  <link rel="stylesheet" href="css/plugins/nouislider.css">
+  <link rel="stylesheet" href="css/plugins/swiper.css">
+  <link rel="stylesheet" href="css/plugins/swiper.min.css">
+
+  <link rel="stylesheet" href="css/plugins/choices.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <script defer src="js/plugins/choices.min.js"></script>
+
+  <script defer src="js/plugins/justValidate.min.js"></script>
+  <script defer src="js/plugins/nouislider.js"></script>
+  <script defer src="js/plugins/swiper.js"></script>
+  <script defer src="js/contact.js"></script>
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+      <div class="container">
+        <div class="header__info header__grid">
+          <div class="info-place">
+            <h3 class="info-place__title">Ваш регион:</h3>
+            <div class="form-group">
+              <div class="dropdown">
+                <button class="dropdown__button info-place__btn btn-reset">Москва</button>
+                <ul class="dropdown__list info-place__list list-reset">
+                  <li class="dropdown__list-item info-place__item" data-value="Казань">Казань</li>
+                  <li class="dropdown__list-item info-place__item" data-value="Уфа">Уфа</li>
+                  <li class="dropdown__list-item info-place__item" data-value="Пермь">Пермь</li>
+                  <li class="dropdown__list-item info-place__item" data-value="Москва">Москва</li>
+                </ul>
+                <input type="text" name="city" value="" class="dropdown__input-hidden">
+              </div>
+            </div>
+          </div>
+          <div class="info-contact">
+            <a class="info-contact__link" href="tel:74958854547" aria-label="Телефон интернет-магазина">
+              <svg class="info-contact__container">
+                <use class="info-contact__svg" xlink:href="svg/sprite.svg#telephone"></use>
+              </svg> +7 (495) 885-45-47
+            </a>
+          </div>
+          <ul class="addnavigation list-reset" aria-label="Дополнительная информация">
+            <li class="addnavigation__item"><a class="addnavigation__link" href="#">О компании</a></li>
+            <li class="addnavigation__item"><a class="addnavigation__link" href="#">Гарантия и возврат</a></li>
+            <li class="addnavigation__item"><a class="addnavigation__link" href="#">Корпоративным клиентам</a></li>
+            <li class="addnavigation__item"><a class="addnavigation__link" href="#">Дизайн-решение</a></li>
+          </ul>
+          <!--бургер-->
+          <button class="header__burger-btn btn-reset" id="burger" aria-label="Кнопка открытия и закрытия меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+
+          <a href="index.html" aria-label="логотип" class="header__logo">
+            <img src="img/logo.svg" alt="логотип">
+          </a>
+          <nav class="header__nav">
+            <ul class="header__nav-list list-reset">
+              <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Магазины</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Шоу-рум</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Доставка и&nbsp;оплата</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Дисконт</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="addnavigation2 list-reset" aria-label="Дополнительная информация">
+              <li class="addnavigation2__item"><a class="addnavigation2__link" href="#">О компании</a></li>
+              <li class="addnavigation2__item"><a class="addnavigation2__link" href="#">Гарантия и возврат</a></li>
+              <li class="addnavigation2__item"><a class="addnavigation2__link" href="#">Корпоративным клиентам</a></li>
+              <li class="addnavigation2__item"><a class="addnavigation2__link" href="#">Дизайн-решение</a></li>
+            </ul>
+          </nav>
+          <!--Поиск-->
+          <div class="search">
+            <div class="search__container">
+              <input class="search__input" type="search" placeholder="Я хочу купить...">
+              <svg class="search__input-svg">
+                <use class="search__input-svg-use" xlink:href="svg/sprite.svg#search"></use>
+              </svg>
+              <button type="submit" class="search__btn btn-reset" aria-label="Кнопка поиска">
+                <svg class="search__btn-svg-container">
+                  <use class="search__btn-svg-use" xlink:href="svg/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div class="dropdown categories menu__item">
+                <button class="dropdown__button menu-button btn-reset">Категория</button>
+                <ul class="dropdown__list dropdown-menu categories-list list-reset">
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Диваны</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Кресла</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Пуфы</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Кровати</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Тумбы</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Комоды</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Стулья</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Столы</a>
+                  </li>
+                  <li class="dropdown__list-item dropdown-menu__item">
+                    <a class="dropdown-menu__link categories-name" href="#">Аксессуары</a>
+                  </li>
+                </ul>
+                <input type="text" name="city" value="" class="dropdown__input-hidden">
+              </div>
+
+            </div>
+          </div>
+
+          <button class="header__account-btn btn-reset" aria-label="Вход в личный кабинет">
+            <svg class="header__account-btn-svg">
+              <use class="header__account-btn-svg-use" xlink:href="svg/sprite.svg#user"></use>
+            </svg>
+          </button>
+          <button class="personal-current btn-reset" aria-label="Корзина">
+            <span class="current">
+              <span class="amount">0</span>
+              <svg class="svg-current" aria-label="корзина">
+                <use xlink:href="svg/sprite.svg#basket"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main contacts-page">
+
+      <div class="breadcrumbs container">
+        <ul class="breadcrumbs__list list-reset">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">Контакты</li>
+        </ul>
+      </div>
+
+      <section class="contacts container">
+        <div class="contacts-content">
+          <h1 class="contacts-content__title">Контакты</h1>
+          <div class="contacts-content__search">
+            <input class="contacts-content__search-input" type="search" placeholder="Поиск магазина">
+            <button type="submit" class="contacts-content__search-btn btn-reset" aria-label="Поиск">Поиск
+            </button>
+          </div>
+          <div class="contacts-content__map"></div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container-up">
+        <div class="footer__block container">
+          <div class="footer__block-info">
+            <a class="footer-logo__link" href="#" aria-label="Логотип">
+              <img class="footer__logo" src="img/logo.png" alt="логотип компании">
+            </a>
+            <ul class="footer__link-list list-reset">
+              <li class="footer__item">
+                <a class="footer__link" href="#" aria-label="Фейсбук">
+                  <svg class="svg-fb">
+                    <use xlink:href="svg/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" aria-label="Вконтакт">
+                  <svg class="svg-vk">
+                    <use xlink:href="svg/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" aria-label="Инстаграмм">
+                  <svg class="svg-insta">
+                    <use xlink:href="svg/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block-navigation">
+            <ul class="footer__nav-list list-reset">
+              <li class="footer__item-use">
+                <a class="footer__item-link" href="#"><b>О нас</b></a>
+                <a class="footer__item-link" href="#">О компании</a>
+                <a class="footer__item-link" href="#">Блог</a>
+              </li>
+              <li class="footer__item-services">
+                <a class="footer__item-link" href="#"><b>Услуги</b></a>
+                <a class="footer__item-link" href="#">Доставка</a>
+                <a class="footer__item-link" href="#">Рассрочка и кредит</a>
+                <a class="footer__item-link" href="#">Сборка и установки</a>
+              </li>
+              <li class="footer__item-contacts">
+                <a class="footer__item-link" href="#"><b>Связь с нами</b></a>
+                <a class="footer__item-link" href="#">Обратная связь</a>
+                <a class="footer__item-link" href="contacts.html">Контакты</a>
+              </li>
+              <li class="footer__item-cooperation">
+                <a class="footer__item-link" href="cooperation.html"><b>Сотрудничество</b></a>
+                <a class="footer__item-link" href="#">Поставщикам</a>
+                <a class="footer__item-link" href="#">Оптовикам</a>
+                <a class="footer__item-link" href="#">Карьера</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer__container-down">
+        <div class="container">
+          <span>SDP® 2011-2021</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
