@@ -1995,6 +1995,7 @@ h1, h2, h3, h4, a {
     left: 0;
     width: 24px;
     height: 3px;
+    will-change: transform;
     background-color: var(--color-lilac);
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -2056,7 +2057,6 @@ h1, h2, h3, h4, a {
     grid-area: unset;
     top: 112px;
     left: -100%;
-    right: 0;
     width: 100%;
     padding: 92px 70px 60px 72px;
     background-color: white;
@@ -2218,7 +2218,6 @@ h1, h2, h3, h4, a {
     margin-bottom: 41px;
   }
   .header__nav {
-    right: 0;
     width: 100%;
     z-index: 203;
     background-image: none;
@@ -2781,7 +2780,11 @@ h1, h2, h3, h4, a {
   position: relative;
   margin-top: 32px;
 }
+.hero__container {
+  overflow: hidden;
+}
 .hero__swiper-slide {
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
 }
